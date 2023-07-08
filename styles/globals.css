@@ -24,3 +24,68 @@ a {
     background: black;
   }
 }
+
+.blog-container{
+  width: clamp(300px, 90%, 800px);
+  margin: 2rem auto;
+}
+.blog-container h2{
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 40px;
+}
+.navbar-wrapper{
+  border-bottom: 1px solid #333;
+}
+
+.navbar-wrapper ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  /* border: 1px solid orange; */
+  justify-content: center;
+  padding: 0;
+}
+
+.navbar-wrapper ul li.active {
+  transition: 0.2s;
+  font-weight: 600;
+  color: #0070f3;
+}
+
+.navbar-wrapper ul li:hover{
+  color: royalblue;
+  transition: 0.2s;
+}
+
+.row{
+  border: 1px solid #333;
+  padding: 25px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  grid-gap: 20px;
+  transition: 0.5s;
+  background-color: #111;
+}
+
+.row:hover {
+  background-color: #222;
+  transition: 0.2s;
+}
+
+.row .row-index{
+
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background-color: royalblue;
+}
+
+.row .row-text{
+  word-wrap: break-word;
+}
