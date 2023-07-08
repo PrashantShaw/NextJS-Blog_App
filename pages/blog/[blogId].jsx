@@ -1,29 +1,15 @@
-import React from 'react'
-import { useRouter } from 'next/router'
-import { useGetPostById } from '../../hooks/api/getPostById'
+export { default } from '../../components/blog/ViewBlog'
 
-const Blog = () => {
-  const router = useRouter()
-  // console.log('blog page', router)
-  const queryId = router.query.blogId
-  const { isLoading, error, data: post = {} } = useGetPostById(queryId)
+export const getServerSideProps = async (context) => {
+  const blogId = context.params.blogId
 
-  console.log('%%%%%', post)
-  if (isLoading) {
-    return <h2 style={{ textAlign: 'center' }}>Loading ...</h2>
+  const BASE_URI = 'https://jsonplaceholder.typicode.com/posts'
+  const DATA_URL = `${BASE_URI}/${blogId}`
+
+  const res = await fetch(DATA_URL)
+  const data = await res.json()
+  
+  return {
+    props: { post: data }
   }
-  if (error) {
-    return <h2>{error.message}</h2>
-  }
-  return (
-    <div>
-      <div className="post-id">{post.id}</div>
-      <div className="post-title-body">
-        <h2>{post.title}</h2>
-        <p>{post.body}</p>
-      </div>
-    </div>
-  )
 }
-
-export default Blog
