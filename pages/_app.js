@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import Navbar from '../components/navbar/navbar'
+import Navbar from '../components/navbar/Navbar'
 import '../styles/globals.css'
 
 function InnerApp({ Component, pageProps }) {
