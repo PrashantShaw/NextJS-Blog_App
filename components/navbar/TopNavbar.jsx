@@ -10,7 +10,7 @@ const NavItem = ({ item, active }) => {
     </>
 }
 
-const Navbar = () => {
+const TopNavbar = () => {
     const router = useRouter()
     // console.log('Navbar loaded - ', router)
     
@@ -38,4 +38,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default TopNavbar

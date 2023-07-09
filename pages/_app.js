@@ -1,10 +1,10 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import Navbar from '../components/navbar/Navbar'
+import TopNavbar from '../components/navbar/TopNavbar'
 import '../styles/globals.css'
 
 function InnerApp({ Component, pageProps }) {
   return <>
-    <Navbar />
+    <TopNavbar />
     <Component {...pageProps} />
   </>
 }

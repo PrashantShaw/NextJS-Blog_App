@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../../styles/Card.module.css'
 
-const Card = ({ post }) => {
+const BlogCard = ({ post }) => {
     return (
         <div className={styles.card}>
             <div className={styles.post_id}>{post.id}</div>
@@ -13,4 +13,4 @@ const Card = ({ post }) => {
     )
 }
 
-export default Card
+export default BlogCard
