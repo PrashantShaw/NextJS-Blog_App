@@ -1,4 +1,5 @@
 import React from 'react'
+import Card from '../card/Card'
 // import { useRouter } from 'next/router'
 // import { useGetPostById } from '../../hooks/api/getPostById'
 
@@ -16,13 +17,7 @@ const Blog = ({ post }) => {
     //     return <h2>{error.message}</h2>
     //   }
     return (
-        <div>
-            <div className="post-id">{post.id}</div>
-            <div className="post-title-body">
-                <h2>{post.title}</h2>
-                <p>{post.body}</p>
-            </div>
-        </div>
+        <Card post={post} />
     )
 }
 

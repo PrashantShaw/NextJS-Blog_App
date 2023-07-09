@@ -1,0 +1,29 @@
+.card {
+    width: clamp(300px, 90%, 600px);
+    margin: 3rem auto 2rem;
+    border: 1px solid #222;
+    border-radius: 12px;
+    background-color: #111;
+    padding: 2rem 3rem;
+    min-height: 250px;
+    /* display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 30px 1fr; */
+}
+
+.post_id {
+    width: 28px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background-color: royalblue;
+}
+.post_title_body{
+    display: flex;
+    flex-direction: column;
+    /* gap: 18px; */
+}
+.post_body{
+    margin: 0;
+}
